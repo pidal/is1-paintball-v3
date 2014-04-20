@@ -9,6 +9,13 @@ public class Jugador : MonoBehaviour {
 		Rosa
 	}
 
+	public enum Postura
+	{
+		DePie,
+		Agachado,
+		Tumbado
+	}
+
 	public bool activo;
 	public float def_velocidad = 1;
 	public float velocidad;
@@ -24,11 +31,14 @@ public class Jugador : MonoBehaviour {
 	public Jugador enemigo_combatiendo; 
 
 	public Equipos equipo;
+	public Postura postura;
 
 	private Vector3 direccion;
 	
 	// Update is called once per frame
 	void Update () {
+
+		// CalcularVelocidad ();
 
 		if (this.selected) 
 		{
@@ -45,6 +55,21 @@ public class Jugador : MonoBehaviour {
 		if (this.activo == false)
 			Destroy (gameObject, 2f);
 
+	}
+
+	void CalcularVelocidad()
+	{
+		switch (postura) {
+			case Postura.Agachado:
+				this.velocidad = def_velocidad * 0.5f;
+				break;
+			case Postura.Tumbado:
+				this.velocidad = def_velocidad * 0.1f;
+				break;
+			default:
+				this.velocidad = def_velocidad * 1;
+				break;
+		}
 	}
 
 	void OnMouseDown()

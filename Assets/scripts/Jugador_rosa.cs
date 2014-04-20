@@ -8,6 +8,7 @@ public class Jugador_rosa : Jugador {
 
 		activo = true;
 		equipo = Equipos.Rosa;
+		postura = Postura.DePie;
 		this.velocidad = def_velocidad;
 	
 	}
