@@ -1,0 +1,22 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Jugador.cs">
+    <Files>
+      <File FileName="Assets\scripts\Radio_disparo.cs" Line="52" Column="3" />
+      <File FileName="Assets\scripts\Radio_vision.cs" Line="53" Column="38" />
+      <File FileName="Assets\scripts\Radio_deteccion.cs" Line="23" Column="2" />
+      <File FileName="Assets\scripts\Jugador.cs" Line="44" Column="3" />
+      <File FileName="Assets\scripts\Terreno.cs" Line="11" Column="1" />
+      <File FileName="Assets\scripts\Jugador_azul.cs" Line="10" Column="17" />
+      <File FileName="Assets\scripts\Jugador_rosa.cs" Line="9" Column="17" />
+      <File FileName="Assets\scripts\MoverJugador.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Combate.cs" Line="4" Column="28" />
+      <File FileName="Assets\scripts\Obstaculo.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Bosque.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
