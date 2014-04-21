@@ -10,17 +10,17 @@ public static class Combate {
 		Debug.Log (num);
 		if (num <= 5) 
 		{
-			eliminar_jugador(jug1);
+			//eliminar_jugador(jug1);
 		} 
 		else 
 		{
 			eliminar_jugador(jug2);
+			jug1.enemigo_detectado = null;
+			jug1.enemigo_combatiendo = null;
+			jug2.enemigo_detectado = null;
+			jug2.enemigo_combatiendo = null;
 		}
 
-		jug1.enemigo_detectado = null;
-		jug2.enemigo_detectado = null;
-		jug1.enemigo_combatiendo = null;
-		jug2.enemigo_combatiendo = null;
 	}
 
 	private static void eliminar_jugador(Jugador jugador)
@@ -29,5 +29,5 @@ public static class Combate {
 		jugador.selected = false;
 		jugador.transform.rotation = Quaternion.Euler(0,0,180);
 	}
-
+	
 }

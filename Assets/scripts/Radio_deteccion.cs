@@ -19,5 +19,5 @@ public class Radio_deteccion : MonoBehaviour {
 		planetCollider.radius = distancia;
 	}
 
-	// El rango de deteccion no tiene que detectar nada. Es pasivo y auxiliar a los demas rangos.
+	// El rango de deteccion no tiene que detectar nada sino para ser detectado. Es pasivo y auxiliar a los demas rangos.
 }

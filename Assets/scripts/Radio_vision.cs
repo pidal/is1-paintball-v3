@@ -33,10 +33,14 @@ public class Radio_vision : MonoBehaviour {
 
 			if(!jugador.equipo.Equals(jugador_enemigo.equipo))
 			{
-				//Debug.Log("Si se imprime esto malo!");
-				jugador.enemigo_detectado = jugador_enemigo;
-				// El jugador enemigo detectado no tiene porque detectar al primero.
-				//jugador_enemigo.enemigo_detectado = jugador;
+				int layerMask = 1 << LayerMask.NameToLayer("Obstaculos");
+				if(!Physics2D.Linecast(jugador.transform.position, jugador_enemigo.transform.position, layerMask))
+				{
+					//Debug.Log("Si se imprime esto malo!");
+					jugador.enemigo_detectado = jugador_enemigo;
+					// El jugador enemigo detectado no tiene porque detectar al primero.
+					//jugador_enemigo.enemigo_detectado = jugador;
+				}
 			}
 		}
 	}
@@ -54,7 +58,6 @@ public class Radio_vision : MonoBehaviour {
 				// Ver el trigger de arriba
 				//jugador_enemigo.enemigo_detectado = null;
 			}
-
 		}
 	}
 }

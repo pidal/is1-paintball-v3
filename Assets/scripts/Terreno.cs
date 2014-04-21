@@ -24,10 +24,12 @@ public class Terreno : MonoBehaviour {
 			Jugador jugador = col.gameObject.GetComponent<Jugador> ();
 			jugador.tipo_terreno = this;
 
-			jugador.velocidad *= cambio_velocidad;
-			jugador.radio_vision.distancia *= cambio_radio_vision;
-			jugador.radio_disparo.distancia *= cambio_radio_disparo;
-			jugador.radio_deteccion.distancia *= cambio_radio_deteccion;
+//			Esto no es necesario ya que se ejecuta en el update del jugador continuamente.
+
+//			jugador.velocidad *= cambio_velocidad;
+//			jugador.radio_vision.distancia *= cambio_radio_vision;
+//			jugador.radio_disparo.distancia *= cambio_radio_disparo;
+//			jugador.radio_deteccion.distancia *= cambio_radio_deteccion;
 		}
 	}
 
@@ -38,6 +40,7 @@ public class Terreno : MonoBehaviour {
 			Jugador jugador = col.gameObject.GetComponent<Jugador> ();
 			jugador.tipo_terreno = null;
 
+//			Este sin embargo es de vital importancia, para reestablecer los valores por defecto def_
 			jugador.velocidad = jugador.def_velocidad;
 			jugador.radio_vision.distancia = jugador.radio_vision.def_distancia;
 			jugador.radio_disparo.distancia = jugador.radio_disparo.def_distancia;

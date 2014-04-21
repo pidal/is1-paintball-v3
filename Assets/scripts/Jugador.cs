@@ -38,12 +38,17 @@ public class Jugador : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		// CalcularVelocidad ();
+		ActualizarVariables ();
 
 		if (this.selected) 
 		{
 			direccion = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
 			transform.position += direccion * velocidad;
+
+			if (Input.GetKeyDown (KeyCode.Z)) 
+			{
+				CambiarPostura();
+			}
 		}
 
 		if (this.enemigo_combatiendo != null) 
@@ -57,19 +62,46 @@ public class Jugador : MonoBehaviour {
 
 	}
 
-	void CalcularVelocidad()
+	void ActualizarVariables()
 	{
 		switch (postura) {
 			case Postura.Agachado:
 				this.velocidad = def_velocidad * 0.5f;
+				this.radio_vision.distancia = this.radio_vision.def_distancia * 0.5f;
+				this.radio_deteccion.distancia = this.radio_deteccion.def_distancia * 0.5f;
+				this.radio_disparo.distancia = this.radio_disparo.def_distancia * 0.5f;
 				break;
 			case Postura.Tumbado:
 				this.velocidad = def_velocidad * 0.1f;
+				this.radio_vision.distancia = this.radio_vision.def_distancia * 0.3f;
+				this.radio_deteccion.distancia = this.radio_deteccion.def_distancia * 0.3f;
+				this.radio_disparo.distancia = this.radio_disparo.def_distancia * 0.3f;
 				break;
 			default:
 				this.velocidad = def_velocidad * 1;
+				this.radio_vision.distancia = this.radio_vision.def_distancia * 1;
+				this.radio_deteccion.distancia = this.radio_deteccion.def_distancia * 1;
+				this.radio_disparo.distancia = this.radio_disparo.def_distancia * 1;
 				break;
 		}
+
+		if (this.tipo_terreno != null) 
+		{
+			this.velocidad *= tipo_terreno.cambio_velocidad;
+			this.radio_vision.distancia *= tipo_terreno.cambio_radio_vision;
+			this.radio_disparo.distancia *= tipo_terreno.cambio_radio_deteccion;
+			this.radio_deteccion.distancia *= tipo_terreno.cambio_radio_disparo;
+		}
+	}
+
+	void CambiarPostura()
+	{
+		if (postura == Postura.DePie)
+			postura = Postura.Agachado;
+		else if (postura == Postura.Agachado)
+			postura = Postura.Tumbado;
+		else
+			postura = Postura.DePie;
 	}
 
 	void OnMouseDown()
