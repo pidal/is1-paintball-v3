@@ -8,7 +8,7 @@ public class Radio_deteccion : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		def_distancia = 7;
+		def_distancia = 10;
 		distancia = def_distancia;
 	}
 	

@@ -10,7 +10,7 @@ public class Radio_disparo : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		def_distancia = 6;
+		def_distancia = 18;
 		distancia = def_distancia;
 		jugador = transform.parent.GetComponent<Jugador> ();
 	}
@@ -41,6 +41,12 @@ public class Radio_disparo : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+
+	void OnTriggerStay2D (Collider2D col)
+	{
+		OnTriggerEnter2D (col);
 	}
 
 	void OnTriggerExit2D (Collider2D col)

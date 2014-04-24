@@ -57,9 +57,10 @@ public class Jugador : MonoBehaviour {
 			Combate.Combatir(this, enemigo_combatiendo);
 		}
 
-		if (this.activo == false)
-			Destroy (gameObject, 2f);
-
+		if (this.activo == false) 
+		{
+			Destroy (gameObject); //, 2f
+		}
 	}
 
 	void ActualizarVariables()

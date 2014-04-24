@@ -10,7 +10,7 @@ public class Radio_vision : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		def_distancia = 12;
+		def_distancia = 25;
 		distancia = def_distancia;
 		jugador = transform.parent.GetComponent<Jugador> ();
 	}
