@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Jugador : MonoBehaviour {
-	
+
+
 	public enum Equipos
 	{
 		Azul,
@@ -34,7 +35,10 @@ public class Jugador : MonoBehaviour {
 	public Postura postura;
 
 	private Vector3 direccion;
-	
+
+	public SpriteRenderer spriteRenderer;
+
+
 	// Update is called once per frame
 	void Update () {
 
@@ -44,6 +48,7 @@ public class Jugador : MonoBehaviour {
 		{
 			direccion = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
 			transform.position += direccion * velocidad;
+
 
 			if (Input.GetKeyDown (KeyCode.Z)) 
 			{
@@ -88,11 +93,15 @@ public class Jugador : MonoBehaviour {
 
 		if (this.tipo_terreno != null) 
 		{
+			spriteRenderer.color = new Color(255, 255, 255, 0.5f);
 			this.velocidad *= tipo_terreno.cambio_velocidad;
 			this.radio_vision.distancia *= tipo_terreno.cambio_radio_vision;
 			this.radio_disparo.distancia *= tipo_terreno.cambio_radio_deteccion;
 			this.radio_deteccion.distancia *= tipo_terreno.cambio_radio_disparo;
 		}
+		else
+			spriteRenderer.color = new Color(255, 255, 255, 1);
+
 	}
 
 	void CambiarPostura()
