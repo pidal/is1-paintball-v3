@@ -4,13 +4,14 @@ using System.Collections;
 public class Terreno : MonoBehaviour {
 
 	public float cambio_velocidad;
-	public float cambio_visible;
 	public float cambio_radio_deteccion;
 	public float cambio_radio_vision;
 	public float cambio_radio_disparo;
+	public float cambio_transparencia;
 
 	// Use this for initialization
 	void Start () {
+
 	}
 	
 	// Update is called once per frame

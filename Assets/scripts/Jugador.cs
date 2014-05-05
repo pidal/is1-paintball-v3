@@ -38,7 +38,16 @@ public class Jugador : MonoBehaviour {
 
 	public SpriteRenderer spriteRenderer;
 
+	// Funcion llamada desde las clases que heredan de esta. jugador_rosa y jugador_azul
+	public void StartJugador()
+	{
+		spriteRenderer = GetComponent<SpriteRenderer>();
+		activo = true;
+		postura = Postura.DePie;
+		this.velocidad = def_velocidad;
 
+	}
+	
 	// Update is called once per frame
 	void Update () {
 
@@ -93,7 +102,7 @@ public class Jugador : MonoBehaviour {
 
 		if (this.tipo_terreno != null) 
 		{
-			spriteRenderer.color = new Color(255, 255, 255, 0.5f);
+			spriteRenderer.color = new Color(255, 255, 255, tipo_terreno.cambio_transparencia);
 			this.velocidad *= tipo_terreno.cambio_velocidad;
 			this.radio_vision.distancia *= tipo_terreno.cambio_radio_vision;
 			this.radio_disparo.distancia *= tipo_terreno.cambio_radio_deteccion;
@@ -101,7 +110,6 @@ public class Jugador : MonoBehaviour {
 		}
 		else
 			spriteRenderer.color = new Color(255, 255, 255, 1);
-
 	}
 
 	void CambiarPostura()

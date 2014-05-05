@@ -6,13 +6,8 @@ public class Jugador_azul : Jugador {
 
 	// Use this for initialization
 	void Start () {
-
-		spriteRenderer = GetComponent<SpriteRenderer>();
-		activo = true;
+		StartJugador ();
 		equipo = Equipos.Azul;
-		postura = Postura.DePie;
-		this.velocidad = def_velocidad;
-
 	}
 	
 
