@@ -1,8 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Rango_visible.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Terreno.cs">
     <Files>
-      <File FileName="Assets/scripts/Rango_visible.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Jugador.cs" Line="92" Column="38" />
+      <File FileName="Assets/scripts/Arena.cs" Line="12" Column="1" />
+      <File FileName="Assets/scripts/Bosque.cs" Line="12" Column="23" />
+      <File FileName="Assets/scripts/Obstaculo.cs" Line="34" Column="26" />
+      <File FileName="Assets/scripts/Jugador_rosa.cs" Line="9" Column="25" />
+      <File FileName="Assets/scripts/Jugador_azul.cs" Line="6" Column="1" />
+      <File FileName="Assets/scripts/Combate.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Radio_deteccion.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Radio_disparo.cs" Line="47" Column="1" />
+      <File FileName="Assets/scripts/Radio_vision.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Simulador.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Terreno.cs" Line="22" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

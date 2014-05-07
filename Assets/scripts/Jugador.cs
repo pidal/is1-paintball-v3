@@ -58,7 +58,6 @@ public class Jugador : MonoBehaviour {
 			direccion = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
 			transform.position += direccion * velocidad;
 
-
 			if (Input.GetKeyDown (KeyCode.Z)) 
 			{
 				CambiarPostura();
